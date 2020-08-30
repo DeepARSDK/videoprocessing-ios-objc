@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O3d-Oo-u2N">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="epB-LU-WUU">
+            <objects>
+                <navigationController id="O3d-Oo-u2N" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9LW-fC-jSR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fAS-DA-ypc" kind="relationship" relationship="rootViewController" id="DYj-jL-OpH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyo-RU-Vml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-993" y="-572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u74-C4-Taa">
+            <objects>
+                <viewController id="fAS-DA-ypc" userLabel="View Controller" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zxX-SC-EOj" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Yy-jF-Ey4">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="5pR-L3-IVK" customClass="FilterCellView">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wop-71-AOu">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-GV-aQ5">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alp-Wh-Yzu">
+                                            <rect key="frame" x="92" y="92.5" width="36" height="35"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="5QX-uk-UNm"/>
+                                                <constraint firstAttribute="height" constant="36" id="qZj-zK-rAe"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bMP-GV-aQ5" firstAttribute="leading" secondItem="Wop-71-AOu" secondAttribute="leading" id="Ac6-gO-bO4"/>
+                                        <constraint firstAttribute="trailing" secondItem="bMP-GV-aQ5" secondAttribute="trailing" id="I1w-4x-YpC"/>
+                                        <constraint firstItem="bMP-GV-aQ5" firstAttribute="top" secondItem="Wop-71-AOu" secondAttribute="top" id="Ohg-pL-PyK"/>
+                                        <constraint firstAttribute="bottom" secondItem="bMP-GV-aQ5" secondAttribute="bottom" id="cQx-ro-miO"/>
+                                        <constraint firstAttribute="bottom" secondItem="Alp-Wh-Yzu" secondAttribute="bottom" id="p9j-uj-uwZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Alp-Wh-Yzu" secondAttribute="trailing" id="ty0-Uk-jVt"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="checkMark" destination="Alp-Wh-Yzu" id="iQG-jb-OgY"/>
+                                    <outlet property="imageView" destination="bMP-GV-aQ5" id="5Ru-5F-WHY"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Select mask" id="bKw-Bv-jm5">
+                        <barButtonItem key="rightBarButtonItem" title="Pick video" id="Gu9-0W-8nk">
+                            <connections>
+                                <action selector="pickVideo:" destination="fAS-DA-ypc" id="kpj-k0-23F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="zxX-SC-EOj" id="i5s-NK-GfX"/>
+                        <outlet property="pickVideoButton" destination="Gu9-0W-8nk" id="cZS-Vw-Mmu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPb-XJ-6P1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="-573"/>
+        </scene>
+        <!--Offscreen Processing View Controller-->
+        <scene sceneID="AeV-YN-xmQ">
+            <objects>
+                <viewController storyboardIdentifier="processOffscreenID" id="mVh-MQ-HBj" customClass="OffscreenProcessingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vSk-Hm-V0i"/>
+                        <viewControllerLayoutGuide type="bottom" id="jXP-YO-pAM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sST-EM-EfT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-K2-kJk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-Nx-4jm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8lq-qy-LIV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Qa-ew-5nz">
+                                <rect key="frame" x="36" y="645" width="303" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-nq-w5l">
+                                <rect key="frame" x="138.5" y="282.5" width="98.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9ig-dR-0ax">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Y2-Nx-4jm" firstAttribute="leading" secondItem="sST-EM-EfT" secondAttribute="leading" id="3sI-Fd-OSI"/>
+                            <constraint firstItem="sgG-nq-w5l" firstAttribute="centerX" secondItem="sST-EM-EfT" secondAttribute="centerX" id="4xr-OR-0BI"/>
+                            <constraint firstItem="9ig-dR-0ax" firstAttribute="top" secondItem="sgG-nq-w5l" secondAttribute="bottom" constant="20" id="8TP-Fk-c0S"/>
+                            <constraint firstItem="2Qa-ew-5nz" firstAttribute="leading" secondItem="sST-EM-EfT" secondAttribute="leadingMargin" constant="20" id="9ub-VK-JfL"/>
+                            <constraint firstAttribute="bottom" secondItem="6Y2-Nx-4jm" secondAttribute="bottom" id="Cah-9b-ggl"/>
+                            <constraint firstItem="Hjd-K2-kJk" firstAttribute="top" secondItem="sST-EM-EfT" secondAttribute="top" id="J7h-35-nS8"/>
+                            <constraint firstAttribute="trailing" secondItem="Hjd-K2-kJk" secondAttribute="trailing" id="JXY-9x-1a8"/>
+                            <constraint firstItem="Hjd-K2-kJk" firstAttribute="leading" secondItem="sST-EM-EfT" secondAttribute="leading" id="QA7-ee-BZ8"/>
+                            <constraint firstItem="9ig-dR-0ax" firstAttribute="centerY" secondItem="sST-EM-EfT" secondAttribute="centerY" id="XP7-Rh-sVq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Qa-ew-5nz" secondAttribute="trailing" constant="20" id="YQ8-wv-bfC"/>
+                            <constraint firstAttribute="trailing" secondItem="6Y2-Nx-4jm" secondAttribute="trailing" id="gNh-zk-fDc"/>
+                            <constraint firstItem="9ig-dR-0ax" firstAttribute="centerX" secondItem="sST-EM-EfT" secondAttribute="centerX" id="jF3-oF-R6b"/>
+                            <constraint firstAttribute="bottom" secondItem="Hjd-K2-kJk" secondAttribute="bottom" id="jgt-0F-t7a"/>
+                            <constraint firstItem="6Y2-Nx-4jm" firstAttribute="top" secondItem="sST-EM-EfT" secondAttribute="top" id="l2x-QI-J91"/>
+                            <constraint firstItem="jXP-YO-pAM" firstAttribute="top" secondItem="2Qa-ew-5nz" secondAttribute="bottom" constant="20" id="mAq-6t-99Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WcV-fl-fdK"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="9ig-dR-0ax" id="riI-gE-6FH"/>
+                        <outlet property="blurView" destination="6Y2-Nx-4jm" id="QUP-gb-pe3"/>
+                        <outlet property="previewImage" destination="Hjd-K2-kJk" id="jw4-n6-Ze4"/>
+                        <outlet property="processingLabel" destination="sgG-nq-w5l" id="qqL-2U-RfC"/>
+                        <outlet property="progressBar" destination="2Qa-ew-5nz" id="k8q-YZ-M4u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8SY-5y-7K0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="-573"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
