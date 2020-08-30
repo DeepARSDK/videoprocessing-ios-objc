@@ -74,7 +74,7 @@
     [super viewDidLoad];
     
     self.deepAR = [[DeepAR alloc] init];
-    [self.deepAR setLicenseKey:@"dea9123ba3a57c2d9364499645aae4ca2cfb099261cf70a0fab035d92a7686f60f032b4b86234cad"];
+    [self.deepAR setLicenseKey:@"your_license_key_goes_here"];
     self.deepAR.delegate = self;
     [self.deepAR changeLiveMode:NO];
     
