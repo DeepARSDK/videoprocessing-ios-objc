@@ -1,5 +1,7 @@
 # videoprocessing-ios-objc
 
+**Requires DeepAR iOS SDK v2.2.0**
+
 In this example DeepAR is used to process a prerecorded video from Camera Roll. This is a showcase how to use DeepAR in a off-screen, non-live rendering mode to process stream of images and then do something else with them. In this case create a new video using AVFoundation. Make sure to check DeepAR API docs for reference: https://help.deepar.ai/en/articles/4362326-ios-api-documentation
 
 The example makes heavy usage of AVFoundation for encoding and decoding videos so make sure to read up on AVAssetReaderOutput and AVAssetWriterInput usage for this purpose.
