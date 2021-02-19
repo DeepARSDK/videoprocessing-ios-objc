@@ -546,7 +546,7 @@ static double progressOfSampleBufferInTimeRange(CMSampleBufferRef sampleBuffer, 
     if (imageBuffer && (CFGetTypeID(imageBuffer) == CVPixelBufferGetTypeID())) {
         pixelBuffer = (CVPixelBufferRef)imageBuffer;
         
-        [self.deepAR processFrameAndReturn:pixelBuffer outputBuffer:pixelBuffer mirror:NO orientation:0];
+        [self.deepAR processFrameAndReturn:pixelBuffer outputBuffer:pixelBuffer mirror:NO];
     }
     
     dispatch_sync(dispatch_get_main_queue(), ^{
@@ -582,7 +582,7 @@ static double progressOfSampleBufferInTimeRange(CMSampleBufferRef sampleBuffer, 
         *shouldFreePixelBuffer = imageBuffer != *outputPixelBuffer;
         
         // Feed the frame to DeepAR for processing
-        [self.deepAR processFrameAndReturn:*outputPixelBuffer outputBuffer:*outputPixelBuffer mirror:NO orientation:0];
+        [self.deepAR processFrameAndReturn:*outputPixelBuffer outputBuffer:*outputPixelBuffer mirror:NO];
     }
     
     // Display the
